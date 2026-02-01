@@ -1,0 +1,18 @@
+<div id="countdown" style="font-size:24px; margin-top:20px;"></div>
+
+<script>
+  let seconds = 10;
+
+  function updateCountdown() {
+    if (seconds >= 0) {
+      document.getElementById("countdown").innerText = "Countdown: " + seconds;
+      seconds--;
+    } else {
+      document.getElementById("countdown").innerText = "Time's up!";
+      clearInterval(timer);
+    }
+  }
+
+  // Call updateCountdown every 1 second
+  const timer = setInterval(updateCountdown, 1000);
+</script>
